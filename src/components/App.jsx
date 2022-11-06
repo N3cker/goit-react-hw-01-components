@@ -11,12 +11,14 @@ export const App = () => {
   return (
     <div
       style={{
-        height: '100vh',
         display: 'flex',
+        flexDirection: 'column',
         justifyContent: 'center',
+        gap: '20px',
         alignItems: 'center',
         fontSize: 40,
         color: '#010101',
+        margin: '20px 0 20px 0',
       }}
     >
       <Profile
@@ -27,7 +29,10 @@ export const App = () => {
         stats={user.stats}
       />
 
-      <Statistics stats={data} />
+      <Statistics 
+      title={'Upload Stats'}
+      stats={data} 
+      />
 
       <FriendList friends={friends} />
 
